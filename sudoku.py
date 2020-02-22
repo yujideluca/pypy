@@ -42,7 +42,9 @@ def checker(table, coord_y, coord_x, search):
                             table[y_g][x_g], table[y_h][x_h], table[y_i][x_i]
                              ])
     can_be = [(coord_y, coord_x)]+[num for num in range(1,10) if num not in checker_list]
+    print(can_be)
 
+    checker(board, 1, 0, "block")
     #a = bool(table[x_a][y_a] > 0)
     #b = bool(table[x_b][y_b] > 0)
     #c = bool(table[x_c][y_c] > 0)
@@ -61,6 +63,4 @@ def checker(table, coord_y, coord_x, search):
     #or (a and b and c and d and e and f and not g and h and i) \
     #or (a and b and c and d and e and f and g and not h and i) \
     #or (a and b and c and d and e and f and g and h and not i)
-    print(can_be)
-
-checker(board, 1, 0, "block") 
+     
